@@ -13,7 +13,6 @@ class TeacherList(generics.ListCreateAPIView):
     serializer_class = TeacherSerializer
     permission_classes = [permissions.IsAuthenticated]
        
-    
 class TeacherDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Teacher.objects.all()
     serializer_class = TeacherSerializer
@@ -22,13 +21,12 @@ class TeacherDetail(generics.RetrieveUpdateDestroyAPIView):
        
     
 #course view
-
 class CourseList(generics.ListCreateAPIView):
     queryset = Course.objects.all()
     serializer_class = CourseSerializer
     permission_classes = [permissions.IsAuthenticated]
     
-        
+# CourseDetail 
 class CourseDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Course.objects.all()
     serializer_class = CourseSerializer

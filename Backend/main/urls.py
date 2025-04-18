@@ -14,9 +14,13 @@ urlpatterns = [
     path('courses/<int:pk>/',views.CourseDetail.as_view()),
     path('courses/',views.CourseList.as_view()),
     
+    path('coursecategory/',views.CourseCategoryList.as_view()),
+    path('coursecategory/<int:pk>/',views.CourseCategoryDetail.as_view()),
     
+    path('students/',views.StudentList.as_view()),
+    path('students/<int:pk>/',views.StudentDetail.as_view()),
     
-    
+    # 
     # path('courses/',views.CourseList.as_view()),
     
 ]
