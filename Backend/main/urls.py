@@ -9,9 +9,13 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('teachers/',views.TeacherList.as_view()),
-    path('teachers/<int:pk>/',views.TeacherList.as_view()),
-    path('teachers/<int:pk>/update/',views.TeacherList.as_view()),
-    path('teachers/<int:pk>/delete/',views.TeacherList.as_view()),
+    path('teachers/<int:pk>/',views.TeacherDetail.as_view()),
+    
+    path('courses/<int:pk>/',views.CourseDetail.as_view()),
+    path('courses/',views.CourseList.as_view()),
+    
+    
+    
     
     # path('courses/',views.CourseList.as_view()),
     
